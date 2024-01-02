@@ -2,122 +2,101 @@
 <template>
   <v-container fluid>
     <v-row>
-  <div>
-    <v-hover v-slot="{ isHovering, props }">
-      <v-card
-        class="mx-auto"
-        color="grey-lighten-4"
-        max-width="400"
-        v-bind="props"
+    <VCol :cols="20">
+    <v-card
+    class="mx-auto"
+    max-width="344"
+  >
+    <v-img
+      src="@/assets/imagem1.jpeg"
+      height="200px"
+      cover
+    ></v-img>
+
+    <v-card-title>
+      art #2
+    </v-card-title>
+
+    <v-card-subtitle>
+      1,000 miles of wonder
+    </v-card-subtitle>
+
+    <v-card-actions>
+      <v-btn
+        color="#711DB0"
+        variant="text"
       >
-        <v-img
-          :aspect-ratio="10/9"
-          cover
-          src="https://res.cloudinary.com/practicaldev/image/fetch/s--L71__yWO--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/z74oqos1984w5g5ah0i9.jpeg"
-        >
-          <v-expand-transition>
-            <div 
-              v-if="isHovering"
-              class="d-flex transition-fast-in-fast-out bg-red-darken-2 v-card--reveal text-h2"
-              style="height: 100%;"
-            >
-           UI/UX design
-              
-            </div>
-          </v-expand-transition>
-        </v-img>
+        Explore
+      </v-btn>
 
-        <v-card-text class="pt-6">
-         
-          <h3 class="text-h4 font-weight-light text-red mb-2">
-            About:
-          </h3>
+      <v-spacer></v-spacer>
 
-          <div class="font-weight-light text-h6 mb-2">
-            This involves creating the user interface and user experience of a website or web application. Creating a visually appealing and responsive website for users.<br>
-            
-          </div>
+      <v-btn
+        :icon="show ? 'mdi-chevron-up' : 'mdi-chevron-down'"
+        @click="show = !show"
+      ></v-btn>
+    </v-card-actions>
+
+    <v-expand-transition>
+      <div v-show="show">
+        <v-divider></v-divider>
+
+        <v-card-text>
+          I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time for sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data file! Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find a way to escape.
         </v-card-text>
-      </v-card>
-    </v-hover>
-  </div>
+      </div>
+    </v-expand-transition>
+  </v-card>
+</VCol>
 
-  <div style="margin-left: 50px;">
-    <v-hover v-slot="{ isHovering, props }">
-      <v-card
-        class="mx-auto"
-        color="grey-lighten-4"
-        max-width="400"
-        v-bind="props"
+<VCol :cols="20">
+    <v-card
+    class="mx-auto"
+    max-width="344"
+  >
+    <v-img
+      src="@/assets/imagem3.jpeg"
+      height="200px"
+      cover
+    ></v-img>
+
+    <v-card-title>
+      art #1
+    </v-card-title>
+
+    <v-card-subtitle>
+      1,000 miles of wonder
+    </v-card-subtitle>
+
+    <v-card-actions>
+      <v-btn
+        color="#711DB0"
+        variant="text"
       >
-        <v-img
-          :aspect-ratio="10/9"
-          cover
-          src="https://assets.website-files.com/60d251a34163cf29e1220806/63742e4e397f173624ab462e_355-3557482_flutter-logo-png-transparent-png.png"
-        >
-          <v-expand-transition>
-            <div
-              v-if="isHovering"
-              class="d-flex transition-fast-in-fast-out bg-red-darken-2 v-card--reveal text-h2"
-              style="height: 100%;"
-            >
-              Mobile apps
-            </div>
-          </v-expand-transition>
-        </v-img>
+        Explore
+      </v-btn>
 
-        <v-card-text class="pt-6">
+      <v-spacer></v-spacer>
 
-          <h3 class="text-h4 font-weight-light text-red mb-2">
-            About:
-          </h3>
+      <v-btn
+        :icon="show2 ? 'mdi-chevron-up' : 'mdi-chevron-down'"
+        @click="show2 = !show2"
+      ></v-btn>
+    </v-card-actions>
 
-          <div class="font-weight-light text-h6 mb-2">
-            Looking for a way to take your business to the next level? Our mobile app development services can help you achieve just that!
-          </div>
+    <v-expand-transition>
+      <div v-show="show2">
+        <v-divider></v-divider>
+
+        <v-card-text>
+          I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time for sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data file! Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find a way to escape.
         </v-card-text>
-      </v-card>
-    </v-hover>
-  </div>
-
-  <div style="margin-left: 50px;">
-    <v-hover v-slot="{ isHovering, props }">
-      <v-card
-        class="mx-auto"
-        color="grey-lighten-4"
-        max-width="400"
-        v-bind="props"
-      >
-        <v-img
-          :aspect-ratio="10/9"
-          cover
-          src="https://res.cloudinary.com/practicaldev/image/fetch/s--gBj1m14t--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://cdn-images-1.medium.com/max/1200/1%2AaBsgPiEeOE5lLoippRm7BA.png"
-        >
-          <v-expand-transition>
-            <div
-              v-if="isHovering"
-              class="d-flex transition-fast-in-fast-out bg-red-darken-2 v-card--reveal text-h2"
-              style="height: 100%;"
-            >
-              Desktop apps
-            </div>
-          </v-expand-transition>
-        </v-img>
-
-        <v-card-text class="pt-6">
-
-          <h3 class="text-h4 font-weight-light text-red mb-2">
-            About:
-          </h3>
-
-          <div class="font-weight-light text-h6 mb-2">
-            Looking to build desktop applications that can help your business operations or enhance your user's experience? meet our professional desktop products
-          </div>
-        </v-card-text>
-      </v-card>
-    </v-hover>
-  </div>
+      </div>
+    </v-expand-transition>
+  </v-card>
+</VCol>
 </v-row>
+
 </v-container>
 </template>
 
@@ -125,18 +104,14 @@
 
 export default {
   name: 'HelloWorld',
-
+  data: () => ({
+      show: false,
+      show2:false
+})
 }
 </script>
 
 <style>
-  .v-card--reveal {
-    align-items: center;
-    bottom: 0;
-    justify-content: center;
-    opacity: .9;
-    position: absolute;
-    width: 100%;
-  }
+  
 </style>
 

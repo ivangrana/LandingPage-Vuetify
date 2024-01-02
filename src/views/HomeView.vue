@@ -1,18 +1,17 @@
 <template>
   <v-app >
 <v-main>
-    <v-parallax
+    <v-parallax class="mx-auto"
     height="750"
-    src="https://miro.medium.com/max/1400/1*RoXcbaF9lIqwpMjiXg54Vw.png"
+    style="background-color: #EF4040;"
+    src = "@/assets/imagem2.jpeg"
   >
-  <v-container style="font-family: system-ui; background-color: none; color: #ff5c1b; font-size: 60px; opacity: 0.8;">
-    Hi ! I'm Ivan...</v-container>
-  <v-container style="font-family: system-ui; background-color: none; color: #ff5c1b; font-size: 60px; margin-left: 500px; opacity: 0.8; margin-top: 100px;">
-    This is my portfolio page</v-container>
+  <v-container style="font-family: system-ui; background-color: none; color: #fbdccc; font-size: 60px; opacity: 0.8;">
+    Hi ! I'm Tyler Durden...</v-container>
+  
 </v-parallax>
   
-  <v-container fluid style="background-color: #fbdccc;">
-    <div style="font-size: 24px;">Available products</div>
+  <v-container fluid style="background-color: #711DB0;">
     <hello-world/>
   </v-container>
 </v-main> 
